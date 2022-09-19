@@ -1,0 +1,15 @@
+<!--using crispy for alignment (pip install django------>
+{% load crispy_forms_tags %}
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" class= "submit" >
+        </form>
+</body>
+</html>
